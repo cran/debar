@@ -225,7 +225,7 @@ set_frame = function(org_seq_vec, path_out){
 #' Makes sure the match conditions are met prior to continuing with the framing of the sequence. If conditions not
 #' met then the function is stopped and the sequence labelled for rejection.
 #' @param ... additional arguments to be passed between methods.
-#' @return a class object of code{"DNAseq"} 
+#' @return a class object of code "DNAseq" 
 #' @seealso \code{\link{DNAseq}}
 #' @examples
 #' #previously called

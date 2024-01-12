@@ -28,7 +28,7 @@ Or overwrite the file?(FALSE) Default is TRUE.}
 \item{phred_placeholder}{The character to input for the phred score line. Default is '#'.}
 }
 \value{
-a class object of code{"DNAseq"}
+a class object of code "DNAseq"
 }
 \description{
 A wrapper function to deploy the fastq and fata output functions.

@@ -34,7 +34,7 @@ Makes sure the match conditions are met prior to continuing with the framing of 
 met then the function is stopped and the sequence labelled for rejection.}
 }
 \value{
-a class object of code{"DNAseq"}
+a class object of code "DNAseq"
 }
 \description{
 Raw DNA sequence is taken and compared against the nucleotide profile hidden Markov model (PHMM), 

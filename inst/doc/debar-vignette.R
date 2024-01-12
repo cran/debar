@@ -1,16 +1,16 @@
-## ----loadlib, echo = TRUE, results = 'hide', message=FALSE, warning=FALSE----
+## ----loadlib, echo = TRUE, results = 'hide', message=FALSE, warning=FALSE-----
 library(debar)
 
-## ------------------------------------------------------------------------
+## -----------------------------------------------------------------------------
 ex_out = denoise_list(ex_nt_list)
 
-## ---- eval=FALSE---------------------------------------------------------
+## ---- eval=FALSE--------------------------------------------------------------
 #  ex_out = denoise_list(ex_nt_list, cores = 4)
 
-## ------------------------------------------------------------------------
+## -----------------------------------------------------------------------------
 barcode_out = consensus_sequence(ex_out)
 
-## ------------------------------------------------------------------------
+## -----------------------------------------------------------------------------
 #The following example file is used as an input in the vignette
 fastq_example_file = system.file('extdata/coi_sequel_data_subset.fastq.gz', package = 'debar')
 
@@ -18,7 +18,7 @@ fastq_example_file = system.file('extdata/coi_sequel_data_subset.fastq.gz', pack
 #fastq_example_file = system.file('extdata/coi_sequel_data_subset.fastq', package = 'debar')
 #fasta_example_file = system.file('extdata/coi_sequel_data_subset.fasta', package = 'debar')
 
-## ---- eval = FALSE-------------------------------------------------------
+## ---- eval = FALSE------------------------------------------------------------
 #  # NOTE - this block of code is not run so as to avoid the generation of output files!
 #  #
 #  # Our input file with noisy sequence data is fastq_example_file.

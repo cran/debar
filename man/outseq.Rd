@@ -26,7 +26,7 @@ False will lead to only the denoised sequence for the 657bp barcode region being
 then the entire read is masked with ambigious characters. Default is 5.}
 }
 \value{
-a class object of code{"ccs_reads"}
+a class object of code "ccs_reads"
 }
 \description{
 Get the final denoised output sequence for a read.

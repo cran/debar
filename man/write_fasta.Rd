@@ -21,7 +21,7 @@ write_fasta(x, ...)
 Or overwrite the file?(FALSE) Default is TRUE.}
 }
 \value{
-a class object of code{"DNAseq"}
+a class object of code "DNAseq"
 }
 \description{
 Output the denoised consensus sequence to a fasta file.

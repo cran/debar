@@ -1,8 +1,5 @@
 # debar
 ## DEnoise BARcode data with profile hidden Markov models 
-[![Build Status](https://travis-ci.com/CNuge/debar.svg?token=H6eQaqsE1kLqYX3zZ1Xz&branch=master)](https://travis-ci.com/CNuge/debar)
-[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)
-[![codecov](https://codecov.io/gh/CNuge/debar/branch/master/graph/badge.svg)](https://codecov.io/gh/CNuge/debar)
 --------------------------------------------------------
 
 `debar` is an R package designed for denoising sequence data for the animal DNA barcode marker: cytochrome c oxidase I (COI-5P, or the five prime portion of COI). The package is designed to detect and correct insertion and deletion errors within barcode sequences. This is accomplished through comparison of input sequences against a profile hidden Markov (PHMM) model [using the Viterbi algorithm](https://en.wikipedia.org/wiki/Viterbi_algorithm) and adjustment of the sequence based on the reported Viterbi path (`debar` depends on functions from the R package [aphid](https://CRAN.R-project.org/package=aphid) for the PHMM strucutre and for running the Viterbi algorithm).
@@ -13,7 +10,7 @@ Inserted base pairs are removed and deleted base pairs are accounted for through
 
 The `debar` denoising method is designed to increase the accuracy of reported barcode sequences. It is therefore best applied when the accuracy of a barcode is paramount, namely in the generation of novel barcode sequences. In the case of metabarcoding analysis `debar` can allow for denoised halpotypes to be obtained for operational taxonomic units (OTUs).
 
-The package was initially designed for processing [single molecule real-time (SMRT) sequencing](https://www.pacb.com/smrt-science/smrt-sequencing/) outputs produced by [the Pacific Biosciences SEQUEL platform](https://www.pacb.com/products-and-services/sequel-system/). However, the method is barcode-based (as opposed to sequencer-based) and should therefore be robust to COI sequence data of any origin. If you intend to apply debar in the denoising of metabarcode data, it is recommended that you do so after quality filtering and dereplication of reads. Please consult the package vignette for recommended parameters and examples of integration into barcoding and metabarcoding workflows. 
+The package was initially designed for processing single molecule real-time (SMRT) sequencing outputs produced by the Pacific Biosciences SEQUEL platform. However, the method is barcode-based (as opposed to sequencer-based) and should therefore be robust to COI sequence data of any origin. If you intend to apply debar in the denoising of metabarcode data, it is recommended that you do so after quality filtering and dereplication of reads. Please consult the package vignette for recommended parameters and examples of integration into barcoding and metabarcoding workflows. 
 
 ## Installation
 
@@ -81,7 +78,7 @@ All a user needs to do is specify the input and output files and as well as any 
 
 A complete file can be denoised in a single line of R code, simply specify the input and output files. When processing fastq files, `debar` preserves the phred scores.
 
-*Note*: running the following example will generate an output file [in your current working directory!](https://support.rstudio.com/hc/en-us/articles/200711843-Working-Directories-and-Workspaces)
+*Note*: running the following example will generate an output file in your current working directory!
 ```
 #gzipped fastq
 gzfastq_example_file = system.file('extdata/coi_sequel_data_subset.fastq.gz', package = 'debar')
@@ -92,7 +89,7 @@ If you are planning on utilizing `debar` for large input files, please consult t
 
 ## Version Notes
 
-Initial design and default parameters are based on using `debar` to process the circular consensus sequences of [single molecule real-time (SMRT) sequencing](https://www.pacb.com/smrt-science/smrt-sequencing/) outputs produced by [the Pacific Biosciences SEQUEL platform](https://www.pacb.com/products-and-services/sequel-system/). Despite this, the package is designed to interface with fastq or fasta files of any origin (although the developers have yet to quantify performance on other data sources).
+Initial design and default parameters are based on using `debar` to process the circular consensus sequences of single molecule real-time (SMRT) sequencing outputs produced by the Pacific Biosciences SEQUEL platform. Despite this, the package is designed to interface with fastq or fasta files of any origin (although the developers have yet to quantify performance on other data sources).
 In the future we hope to quantify performance and provide informed hyper-parameter choices for outputs from other sequencing platforms. If you are interested in beta testing `debar` on barcode or metabarcode data from other platforms, please [contact Cam](https://cnuge.github.io), we would be happy to work with you to optimize `debar`'s functionality for other sequencing platforms.
 
 ## Acknowledgements

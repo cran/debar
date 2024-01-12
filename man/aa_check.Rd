@@ -23,7 +23,7 @@ Passing frame_offset = 1 would offset the sequence by one and therefore make the
 framed sequence the the first nucelotide of the first codon.}
 }
 \value{
-a class object of code{"ccs_reads"}
+a class object of code ccs_reads 
 }
 \description{
 A side product of the framing and adjustment functions is that the reading frame of the sequence is established

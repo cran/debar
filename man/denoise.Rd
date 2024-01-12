@@ -84,7 +84,7 @@ framed sequence the the first nucelotide of the first codon. Used only when aa_c
 Or should the sequence overwrite the output file?(FALSE) Default is TRUE.}
 }
 \value{
-a class object of code{"DNAseq"}
+a class object of code "DNAseq"
 }
 \description{
 This function runs the complete denoising pipeline for a given input sequence and its corresponding

@@ -25,7 +25,7 @@ Or overwrite the file?(FALSE) Default is TRUE.}
 \item{phred_placeholder}{The character to input for the phred score line. Default is '#'.}
 }
 \value{
-a class object of code{"DNAseq"}
+a class object of code "DNAseq"
 }
 \description{
 Output the denoised sequence to a fastq format with placeholder phred scores.
